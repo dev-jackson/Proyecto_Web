@@ -1,0 +1,27 @@
+
+body.dark{
+    background: #222222;
+}
+
+body.dark header{
+    background: #c8c8c87e;
+    -webkit-box-shadow: 5px 5px 10px rgba(170, 170, 170, 0.411);
+          box-shadow: 5px 5px 10px rgba(170, 170, 170, 0.411);
+}
+body.dark a{
+    color: white;
+}
+body.dark .menu{
+    color: white;
+}
+body.dark .nav_links.active{
+    background: #c8c8c87e;
+}
+.body.dark .nav_links li a:hover{
+    color: #00aad4;
+}
+@media(max-width:720px){
+    .body.dark .nav_links>ul{
+        background: transparent;
+    }
+}
