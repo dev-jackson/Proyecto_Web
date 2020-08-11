@@ -31,6 +31,7 @@ header{
 }
 .nav_links{
     list-style: none;
+    background-color: #FFF;
 }
 .nav_links li{
     display: inline-block;
@@ -107,9 +108,8 @@ header{
 }
 /*------------- Body -------------*/
 .sub-container{
-
     text-align: center;
-    padding: 2em;
+    padding: 1em;
 }
 .sections-initial{
     margin: 0em 5em;
@@ -140,10 +140,10 @@ header{
     font-weight: 100;
 }
 .cat-matriz{
-    padding: 1em 20em;
+    padding: 1em 2em;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(40%,auto));
+    grid-template-columns: repeat(auto-fill,minmax(30%,auto));
     column-gap: 50px;
     row-gap: 20px;
 }
@@ -245,18 +245,24 @@ select{
 }
 .combo-cat{
     padding: 2em 5em;
-    justify-content: space-around;
+    justify-content: space-between;
     display: flex;
 }
 #btnAddProduct{
     border: none;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px;
+    margin: 5px;
+    border-radius: 8px;
     color: white;
     font-weight: 500;
-    font-size: 12px;
-    background-color: #2980B9;
-
+    font-size: 14px;
+    background-color: teal;
+}
+.cat-products > select{
+    width: 200px;
+}
+.cat-business > select{
+    width: 200px;
 }
 /*------------- Footer ----------- */
 footer{
@@ -300,10 +306,51 @@ footer{
         margin: 1em;
         display: block;
     }
+    .sub-container{
+        padding: 0;
+    }
+    .sections-initial{
+        display: block;
+    }
+    .text-initial{
+        margin: .5em;
+        width: 95%;
+    }
+    .combo-cat{
+        padding: 5px;
+        display: block
+    }
+    .ctn-btns{
 
+    display: block;
+    }
 }
 @media(max-width: 720px){
+    .ctn-btns{
 
+    display: block;
+    }
+    .container-cat{
+        height: 50%;
+        padding: 0;
+    }
+    .combo-cat{
+        padding: 5px;
+        display: block
+    }
+    .cat-products{
+        margin-bottom: 1em;
+    }
+    .sub-container{
+        padding: 0;
+    }
+    .sections-initial{
+        display: block;
+    }
+    .text-initial{
+        margin: .5em;
+        width: 95%;
+    }
     .logo{
         width:7%;
     }

@@ -1,6 +1,5 @@
 /*const btnSwitch = document.querySelector('#switch');
-const btnMenu = document.querySelector('.menu');
-const btnShowMenu= document.querySelector('#nav_links');
+
 
 btnSwitch.addEventListener('click',()=>{
     document.body.classList.toggle('dark');
@@ -17,10 +16,12 @@ if(localStorage.getItem('dark-mode') === 'true'){
     document.body.classList.remove('dark');
     btnSwitch.classList.remove('active');
 }
-
+*/
+const btnShowMenu= document.querySelector('#nav_links');
+const btnMenu = document.querySelector('.menu');
 btnMenu.addEventListener('click',()=>{
     btnShowMenu.classList.toggle('active');
-});*/
+});
 /* -------- Funtions --------- */
 function soloLetras(e) {
     key = e.keyCode || e.which;
@@ -57,12 +58,17 @@ function soloNumeros(e) {
     }
 }
 
-function validarEmail(valor) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (re.test(valor)) {
+function validateEmail(element) {
+    var text = document.getElementById(element.id).value;
+    var alertEmail = document.getElementById('email-alert');
+    alertEmail.style.display = 'block';
+    alertEmail.style.color = 'red';
+    var re = new RegExp(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
+    if (!re.test(text)) {
+        alertEmail.innerHTML = "Correo invalido";
         return true;
     } else {
+        alertEmail.innerHTML = "";
         return false;
     }
-
 }
