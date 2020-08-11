@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="../src/css/generalStyle.css">
+  <script src="../src/js/index.js" charset="utf-8"></script>
+  <title></title>
+</head>
+
+<body>
+  <div class="container-bnss">
+      <div class="img-bnss">
+          <img src="../src/imgs/add_card.svg" alt="" width="100%" height="100%">
+      </div>
+    <div class="data-form">
+        <form class="bnss-form" action="index.html" method="post">
+            <h1>Registro Producto</h1>
+            <label for="">Nombre del productos:</label>
+            <input type="text" name="name" value="" id="name" placeholder="Ingrese nombre de la empresa" onkeypress="return soloLetras(event);" >
+            <label for="">Precio:</label>
+            <input type="text" name="ruc" value="" max="11" id="ruc" placeholder="Ingrese precio" onkeypress="return soloNumeros(event);">
+            <label for="">Cantidad:</label>
+            <input type="text" name="email" value="" id="cant" placeholder="Ingrese correo" onerror="return " >
+            <label for="">Telefono:</label>
+            <input type="text" name="phone" value="" placeholder="Ingrese su numero de telefono" onkeypress="return soloNumeros(event);" >
+            <label for="">Disponilidad:</label>
+            <select class="" name="" id="dispon">
+                <option value="0">No</option>
+                <option value="1">Si</option>
+            </select>
+            <label for="">Categoria:</label>
+            <select class="" name="" id="cat-elect">
+                <option value="0">Alimentos</option>
+                <option value="1">Juegos</option>
+                <option value="2">Electronica</option>
+            </select>
+            <div class="btns-bnss">
+                <input type="submit" id= "bnssEnviar" value="Enviar">
+                <input type="button" name="back" id="back" value="Cancelar">
+            </div>
+        </form>
+    </div>
+  </div>
+</body>
+    <script type="text/javascript">
+        document.getElementById('bnssEnviar').onclick = function(){
+            var name = document.getElementById('name').value;
+            var ruc = document.getElementById('ruc').value;
+            var cant = document.getElementById('cant').value;
+            var dispon = document.getElementById('dispon').value;
+            var catElect = document.getElementById('cat-elect').value;
+            if(name==""||ruc==""||dispon==""||catElect==""){
+                swal("Error!", "Debe ingresar todos los campos", "error");
+                return false;
+            }else{
+                swal("Buen trabajo!", "Registro exitoso", "success");
+                return true;
+            }
+        }
+        document.getElementById('back').onclick = function(){
+            swal({
+                     closeOnClickOutside:false,
+                     title: "Aviso !",
+                     text: "Esta seguro de cancelar registro",
+                     icon: "warning",
+                     buttons: {
+                     si:{
+                      text:"si",
+                      value:"si"
+                      },
+                      no:{
+                      text:"no",
+                      value:"no"
+                      },
+                      },
+                })
+                .then((value) => {
+                switch (value) {
+                case "si":
+                           window.location.href ="../views/product.html";
+                  break;
+                case "no":
+
+                  break;
+            }
+          })
+        }
+    </script>
+</html>

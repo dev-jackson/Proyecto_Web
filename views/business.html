@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="../src/css/generalStyle.css">
+  <script src="../src/js/index.js" charset="utf-8"></script>
+  <title></title>
+</head>
+
+<body>
+  <div class="container-bnss">
+      <div class="img-bnss">
+          <img src="../src/imgs/business.svg" alt="" width="100%" height="100%">
+      </div>
+    <div class="data-form">
+        <form class="bnss-form" action="index.html" method="post">
+            <h1>Registro Empresa</h1>
+            <label for="">Nombre de empresa:</label>
+            <input type="text" name="name" value="" placeholder="Ingrese nombre de la empresa" onkeypress="return soloLetras(event);" required>
+            <label for="">RUC:</label>
+            <input type="text" name="ruc" value="" max="11" placeholder="Ingrese su ruc" onkeypress="return soloNumeros(event);">
+            <label for="">Correo:</label>
+            <input type="text" name="email" value="" id="email" placeholder="Ingrese correo" onerror="return " required>
+            <label for="">Telefono:</label>
+            <input type="text" name="phone" value="" placeholder="Ingrese su numero de telefono" onkeypress="return soloNumeros(event);" required>
+            <label for="">Forma de pago:</label>
+            <select class="" name="">
+                <option value="0">PayPal</option>
+                <option value="1">Efectivo</option>
+                <option value="2">Otros</option>
+            </select>
+            <div class="btns-bnss">
+                <input type="submit" name="submit" id = "bnssEnviar"value="Enviar">
+                <input type="button" name="back" value="Cancelar">
+            </div>
+        </form>
+    </div>
+  </div>
+</body>
+    <script type="text/javascript">
+        document.getElementById('bnnsEnviar').onclick = function(){
+            var name = document.getElementById('name');
+            var ruc = document.getElementById('ruc');
+            var
+        }
+    </script>
+</html>
