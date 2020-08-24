@@ -5,23 +5,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="../src/imgs/pngwing.com.png" type="image/x-icon">
         <script src="" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../src/css/generalStyle.css">
         <title>Project Web</title>
     </head>
     <body>
-        <div class="container-login">
-            <div class="login">
+        <div class="container-login" id="container-login">
+            <div class="login" id="login">
+                <a href="#" id="btn-cerrar-login" class="btn-cerrar-login"><i class="fast fa-times"></i></a>
                 <form class="form-login" action="index.html" method="post">
                     <h2>Inicia session</h2>
                     <div class="input-icon">
                         <i class="fas fa-user"></i>
-                        <input type="text" name="" value="" placeholder="Ingrese sus nombres" required>
+                        <input type="text" class="text" name="" value="" placeholder="Ingrese sus nombres" required>
                     </div>
                     <div class="input-icon">
                         <i class="fas fa-key"></i>
-                        <input type="text" name="" value="" placeholder="Ingrese clave" required>
+                        <input type="text" class="text" name="" value="" placeholder="Ingrese clave" required>
                     </div>
+                    <div class="input-icon">
+                        <i class="fas fa-key"></i>
+                        <input type="submit" name="button1" class="btnAcceso" value="Ingresar">
+                    </div>
+                    <p><a href="#">¿Olvidaste tu contraseña?</a></p>
                 </form>
             </div>
         </div>
+        <script src="../src/js/index.js"></script>
     </body>
 </html>

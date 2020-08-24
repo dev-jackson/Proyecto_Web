@@ -179,7 +179,7 @@ header{
 
 .data-form{
     width: 100%;
-    transition:
+    transition:none;
 }
 .bnss-form{
     padding: 1em 2em;
@@ -355,4 +355,63 @@ footer{
         text-align: center;
         display: block;
     }
+}
+/*---------LOGIN---------*/
+.container-login{
+    width: 400px;
+    height:340px;
+    background: rgba(0, 4, 15, 0.795);
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 20px 30px;
+    border-top: 4px solid #017bab;
+    color: white;
+}
+.login.btn-cerrar-login{
+    font-size: 16px;
+    line-height: 16px;
+}
+.btnAcceso{
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+    background-color: teal;
+    border-radius: 5px;
+}
+.btnAcceso:hover{
+    cursor: pointer;
+    background-color: rgb(0,128, 128, .7);
+}
+.container-login h2 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+}
+.text{
+    width: 100%;
+    border: 1px solid teal;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #252323;
+    font-size: 14px;
+    font-weight: bold;
+}
+.container-login p{
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+.container-login a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+.container-login a:hover{
+    text-align: underline;
 }

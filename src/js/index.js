@@ -66,3 +66,19 @@ function validarEmail(valor) {
     }
 
 }
+
+/*`````login````*/
+var btnLogin = document.getElementById('btnLogin'),
+    containerlogin = document.getElementById('container-login'),
+    login = document.getElementById('login'),
+    btncerrarlogin = document.getElementById('btn-cerrar-login');
+
+btnLogin.addEventListener('click', function(){
+    containerlogin.classList.add('active');
+    login.classList.add('active');
+});
+
+btncerrarlogin.addEventListener('click', function(){
+    containerlogin.classList.remove('active');
+    login.classList.remove('active');
+});
