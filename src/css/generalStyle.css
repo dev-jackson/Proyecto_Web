@@ -195,6 +195,7 @@ header{
     margin-bottom: 2em;
 }
 .bnss-form > input[type=text]{
+    color: white;
     border-radius: 5px;
     padding: 10px;
     width: 90%;
@@ -406,7 +407,8 @@ footer{
 /*---------LOGIN---------*/
 .container-login{
     width: 400px;
-    height:340px;
+    height:380px;
+    border-radius: 5px;
     background: rgba(0, 4, 15, 0.795);
     margin: auto;
     margin-top: 180px;
