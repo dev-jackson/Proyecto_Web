@@ -10,26 +10,10 @@
     <link rel="stylesheet" href="../src/css/darkMode.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
+<!--- actulizar la lista de imagenes con bd no de manera estatica--->
 <body>
     <div class="container">
-       <header>
-            <img src="../src/imgs/pngwing.com.png" alt="" class="logo">
-            <nav class="nav_links" id="nav_links">
-                <ul>
-                    <li class="item"><a href="../views/home.html">Inicio</a></li>
-                    <li class="item active"><a href="#">Productos</a></li>
-                    <li class="item"><a href="#">Ayuda</a></li>
-                </ul>
-            </nav>
-            <button type="button" name="button" class="btnLogin">
-                Ingresar
-            </button>
-            <!---<button class="switch" id="switch">
-                <span><i class="fas fa-sun"></i></span>
-                <span><i class="fas fa-moon"></i></span>
-            </button>---->
-           <a href="#" class="menu"> <span><i class="fas fa-ellipsis-v" ></i></span></a>
-        </header>
+    <?php require_once 'static/header.html'?>
         <div class="container-cat">
             <section class="">
                 <h1>Categorias</h1>
@@ -61,7 +45,7 @@
             <section class="items">
                 <div class="cat-card">
                     <section class="card-img">
-                        <img src="../src/imgs/aliment.jpg" alt="">
+                        <img src="./src/imgs/aliment.jpg" alt="">
                     </section>
                     <section class="cat-title">
                         <h1>Title title</h1>
@@ -69,7 +53,7 @@
                 </div>
                 <div class="cat-card">
                     <section class="card-img">
-                        <img src="../src/imgs/aliment.jpg" alt="">
+                        <img src="./src/imgs/aliment.jpg" alt="">
                     </section>
                     <section class="cat-title">
                         <h1>Title title</h1>
@@ -77,7 +61,7 @@
                 </div>
                 <div class="cat-card">
                     <section class="card-img">
-                        <img src="../src/imgs/aliment.jpg" alt="">
+                        <img src="./src/imgs/aliment.jpg" alt="">
                     </section>
                     <section class="cat-title">
                         <h1>Title title</h1>
@@ -85,7 +69,7 @@
                 </div>
                 <div class="cat-card">
                     <section class="card-img">
-                        <img src="../src/imgs/aliment.jpg" alt="">
+                        <img src="./src/imgs/aliment.jpg" alt="">
                     </section>
                     <section class="cat-title">
                         <h1>Title title</h1>
@@ -93,7 +77,7 @@
                 </div>
                 <div class="cat-card">
                     <section class="card-img">
-                        <img src="../src/imgs/aliment.jpg" alt="">
+                        <img src="./src/imgs/aliment.jpg" alt="">
                     </section>
                     <section class="cat-title">
                         <h1>Title title</h1>
@@ -101,7 +85,7 @@
                 </div>
                 <div class="cat-card">
                     <section class="card-img">
-                        <img src="../src/imgs/aliment.jpg" alt="">
+                        <img src="./src/imgs/aliment.jpg" alt="">
                     </section>
                     <section class="cat-title">
                         <h1>Title title</h1>

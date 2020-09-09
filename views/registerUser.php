@@ -5,19 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="../src/imgs/pngwing.com.png" type="image/x-icon">
         <script src="" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../src/css/generalStyle.css">
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="./src/css/generalStyle.css">
         <title>Project Web</title>
     </head>
     <body>
-        <div class="container-login" id="container-login">
+        <div class="container-register" id="container-login">
             <div class="login" id="login">
-                <a href="#" id="btn-cerrar-login" class="btn-cerrar-login"><i class="fast fa-times"></i></a>
-                <form class="form-login" action="index.php?c=User&a=registerUser" method="post" id="register">
+                <form class="form-login" action="" id="register">
                     <h2>Inicia session</h2>
                     <div class="input-icon">
-                        <i class="fas fa-user"></i>
+                    <i class="far fa-address-card"></i>
                         <input type="text" class="text" name="id" value="" placeholder="Ingrese Cedula" required>
                     </div>
                     <div class="input-icon">
@@ -32,20 +29,40 @@
                         <i class="fas fa-key"></i>
                         <input type="text" class="text" name="password" value="" placeholder="Ingrese clave" required>
                     </div>
-                    <div class="input-icon">
-                        <i class="fas fa-key"></i>
                         <input type="submit" name="button1" class="btnAcceso" value="Registrarse">
-                        <input type="button" name="button1" class="btnAcceso" style="background-color: red;" value="Cancelar">
-                    </div>
                 </form>
             </div>
         </div>
-        <script src="../src/js/index.js"></script>
+        <!---<script src="./src/js/index.js"></script>--->
         <script>
-            $('register').on('submit',(e)=>{
-                e.preventDefault();
-                console.log($('register').serialize());
-            })
+            $(document).ready(function(){
+                $('#register').on('submit',(e)=>{
+                    e.preventDefault();
+                    $.ajax({
+                        type: 'POST',
+                        url: 'index?c=Usuario&a=registerUsuario',
+                        async: true,
+                        data: $('#register').serialize(),
+                        beforeSend: () => {
+
+                        },
+                        success: (res) => {
+                            if(res){
+                                swal(
+                                    "Usuario registrado",
+                                    "Registro Existoso",
+                                    "success"
+                                );
+                            }else{
+
+                            }
+                        },
+                        error: (err) => {
+                            console.log(err);
+                        }
+                    });
+                })
+            });
         </script>
     </body>
 </html>

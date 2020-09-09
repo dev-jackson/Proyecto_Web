@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="../src/imgs/pngwing.com.png" type="image/x-icon">
         <script src="" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../src/css/generalStyle.css">
         <title>Project Web</title>
         <style>
             .btnRegister{
@@ -21,7 +20,7 @@
     <body>
         <div class="container-login" id="container-login">
             <div class="login" id="login">
-                <a href="#" id="btn-cerrar-login" class="btn-cerrar-login"><i class="fast fa-times"></i></a>
+                <a href="#" id="btn-cerrar-login" class="btn-cerrar-login"><i class="fast fa-time"></i></a>
                 <form class="form-login" action="index.html" method="post">
                     <h2>Inicia session</h2>
                     <div class="input-icon">
@@ -32,12 +31,10 @@
                         <i class="fas fa-key"></i>
                         <input type="text" class="text" name="" value="" placeholder="Ingrese clave" required>
                     </div>
-                    <div class="input-icon">
-                        <i class="fas fa-key"></i>
                         <input type="submit" name="button1" class="btnAcceso" value="Ingresar">
                         <span>o</span>
-                        <a href="./registerUser.html" class="btnAcceso">Registrarse</a>
-                    </div>
+                        <a href="index.php?a=pages&p=registerUser" class="btnRegister">Registrarse</a>
+                    <br>
                     <br>
                     <p><a href="#">¿Olvidaste tu contraseña?</a></p>
                 </form>

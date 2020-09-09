@@ -7,25 +7,7 @@
 </head>
 <body>
     <div class="container">
-       <header>
-            <img src="./src/imgs/pngwing.com.png" alt="" class="logo">
-            <nav class="nav_links" id="nav_links">
-                <ul>
-                    <li class="item active"><a href="../views/home.html">Inicio</a></li>
-                    <li class="item"><a href="./views/product.html">Productos</a></li>
-                    <li class="item"><a href="./views/business.html">Business</a></li>
-                    <li class="item"><a href="#">Ayuda</a></li>
-                </ul>
-            </nav>
-            <a href="./views/login.html"><button type="button" name="button" class="btnLogin" id="btnLogin">
-                Ingresar
-            </button></a>
-            <!---<button class="switch" id="switch">
-                <span><i class="fas fa-sun"></i></span>
-                <span><i class="fas fa-moon"></i></span>
-            </button>---->
-           <a href="#" class="menu"> <span><i class="fas fa-ellipsis-v" ></i></span></a>
-        </header>
+        <?php require_once 'static/header.html'?>
         <br>
         <div class="sub-container">
             <div class="sections-initial">
@@ -106,30 +88,7 @@
                 </div>
             </div>
         </div>
-        <footer>
-            <div class="social">
-                <ul>
-                    <li><span class="face"><i class="fab fa-facebook" style="color: #325aaf;"></i></span></li>
-                    <li><span><i class="fab fa-instagram insta" ></i></span></span></li>
-                    <li><span><i class="fab fa-twitter twi" ></i></span></li>
-                    <li><i class="fab fa-youtube you" ></i></li>
-                </ul>
-            </div>
-            <div class="tabs">
-                <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
-            </div>
-            <div class="dutys">
-                <p>
-                    <span>&copy; 2020 Project Web</span>
-                </p>
-            </div>
-        </footer>
+        <?php require_once 'static/footer.html'?>
     </div>
     <script src="./src/js/index.js"></script>
 </body>

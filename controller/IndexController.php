@@ -7,12 +7,18 @@
 
         public function index(){
             require_once LIB;
-            require_once 'views/home.html';
+            require_once 'views/home.php';
         }
 
         public function login(){
             require_once LIB;
-            require_once 'views/login.html';
+            require_once 'views/login.php';
+        }
+
+        public function pages(){
+            require_once LIB;
+            $page = $_REQUEST['p'];
+            require_once 'views/'.$page.'.php';
         }
     }
 
