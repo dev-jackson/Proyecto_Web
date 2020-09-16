@@ -8,14 +8,14 @@
             $action = (isset($_REQUEST['a']))? $_REQUEST['a'] :  'index';
             $controller = strtolower($newcontroller);
             $newcontroller = ucwords($newcontroller)."Controller";
-            if($controller==='Admin'){
+            if($controller==='admin'){
                 require_once "controller/funAdmin/".$newcontroller.".php";
-            }elseif($controller==="Client"){
+            }elseif($controller==="client"){
                 require_once "controller/funClient/".$newcontroller.".php";
-            }elseif($controller==="User"){
+            }elseif($controller==="user"){
                 require_once "controller/funUser/".$newcontroller.".php";
             }else{
-                require_once "controller/" .$newcontroller .".php"; // require class controller index
+                require_once "controller/" .$newcontroller.".php"; // require class controller index
             }
 
             $newcontroller = new $newcontroller;

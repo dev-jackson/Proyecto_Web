@@ -1,52 +1,75 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
 
 *{
-    font-family: 'Roboto', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
+
     background: #FFF;
     transition: .3s ease all;
 }
-li, a, button{
-    color: #000;
-    font-weight: 500;
-    font-size: 18px;
-    text-decoration: none;
+.container{
+    background: #ebf5fb8e;
+    width: 100%;
 }
-header{
+.navbar{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-    padding: 12px 25px;
-    -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
-          box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
-}
-.logo{
-    width: 3%;
-    cursor: pointer;
+    justify-content: space-around;
+    padding: 0;
 }
 .nav_links{
     list-style: none;
-    background-color: #FFF;
+    display: flex;
+} 
+.nav_links > li {
+    padding: 1em 1em;
+    color: rgb(117, 116, 116);
+    font-weight: 500;
+    margin: 0;
+    border-bottom: 2px solid white;
 }
-.nav_links li{
-    display: inline-block;
-    padding: 0px 20px;
+.nav_links > li > a{
+    text-decoration: none;
+    color: rgb(117, 116, 116);
 }
-.nav_links li a {
-    transition: all .3s ease 0s;
+.nav_links > li > a:hover{
+    text-decoration: none;
+    color: #0085b9;
 }
-.nav_links li a:hover{
-    color: #0088a9;
-}
-.active{
+.nav_links > li:hover{
+    color: #0085b9;
+    cursor: pointer;
     border-bottom: 2px solid #0088a9;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+}
+.act-user{
+    display: flex;
+    list-style: none;
+}
+.act-user > li{
+    padding: 1em .5em;
+}
+.act-user > li > a {
+    text-decoration: none;
+    color: rgb(117, 116, 116);
+    font-weight: 500;
+    padding: .5em;
+}
+.act-user > li > .creat{
+    border-radius: 8px;
+    color: white;
+    background-color: #0085b9;
+}
+
+.bnt-Log{
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #0088a9;
 }
 .switch{
     width: 55px;
@@ -140,10 +163,10 @@ header{
     font-weight: 100;
 }
 .cat-matriz{
-    padding: 1em 2em;
+    padding: 1em 3em;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(30%,auto));
+    grid-template-columns: repeat(auto-fill,minmax(25%,auto));
     column-gap: 50px;
     row-gap: 20px;
 }
@@ -165,26 +188,38 @@ header{
 /*------------- Business --------- */
 
 .img-bnss{
-    padding: 1em;
+    transform: translate(-25%,-0%);
+}
+.container-addbss{
+    width: 100%;
+
 }
 .container-bnss{
+    
     height: 100%;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 5em 15em;
     border-radius: 5px;
     display: flex;
 }
 
 .data-form{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 40%;
     width: 100%;
-    transition:none;
 }
 .bnss-form{
-    padding: 1em 2em;
+    padding: 1.5em;
+    border: .2px solid rgb(161, 161, 161);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.900);
+    width: 100%;
 }
 .bnss-form > h1{
+    text-align: center;
     margin-bottom: 1em;
 }
 .bnss-form > label{
@@ -195,14 +230,14 @@ header{
     margin-bottom: 2em;
 }
 .bnss-form > input[type=text]{
-    color: white;
+    color:  black;
     border-radius: 5px;
     padding: 10px;
-    width: 90%;
+    width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .bnss-form > input[type=text]:focus{
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline-color: #0088a9;
 }
 .bnss-form{
     height: 100%;
@@ -221,25 +256,41 @@ select{
     background-color: #2980B9;
     color: white;
     border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
     margin: 5px;
+}
+.btns-bnss > input[type=submit]:hover{
+    background-color: #1e5f8a;
 }
 .btns-bnss > input[type=button]{
     padding: 10px;
     width: 90px;
-    border: 0px;
-    background-color: #C0392B;
+    background-color:#C0392B;
+    color: #C0392B;
+    border:none;
     color: white;
+    font-size: 15px;
+    font-weight: 600;
     border-radius: 5px;
     margin: 5px;
 }
+.btns-bnss > input[type=button]:hover{
+    background-color: #81271d;
+    color: white;
+    border: none;
+}
 /*------------- Products --------- */
 .items{
-    padding: 1em 1em;
+    padding: 1em 8em;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(20%,auto));
     column-gap: 20px;
     row-gap: 20px;
+}
+.option-items{
+    width: 100%;
 }
 .container-cat{
     padding: 1em 2em;
@@ -304,7 +355,6 @@ footer{
 }
 @media(max-width: 920px){
     .container-bnss{
-        margin: 1em;
         display: block;
     }
     .sub-container{
@@ -327,6 +377,17 @@ footer{
     }
 }   
 @media(max-width: 720px){
+    .data-form{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        max-width: 90%;
+        width: 100%;
+    }
+    .img-bnss{
+        transform: translate(-20%,-0%);
+    }
     .ctn-btns{
 
     display: block;

@@ -1,6 +1,7 @@
 <?php
     class UserDTO{
         private $id;
+        private $ci;
         private $first_name;
         private $last_name;
         private $password;
@@ -8,6 +9,9 @@
     //getters
     public function getId(){
         return $this->id;
+    }
+    public function getCi(){
+        return $this->ci;
     }
     public function getFirstName(){
         return $this->first_name;
@@ -25,8 +29,11 @@
     public function setId($id){
         $this->id = $id;
     }
+    public function setCi($ci){
+        $this->ci = $ci;
+    }
     public function setFirstName($first_name){
-        $this->last_name = $first_name;
+        $this->first_name = $first_name;
     }
     public function setLastName($last_name){
         $this->last_name = $last_name;

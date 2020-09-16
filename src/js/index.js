@@ -19,9 +19,9 @@ if(localStorage.getItem('dark-mode') === 'true'){
 */
 const btnShowMenu= document.querySelector('#nav_links');
 const btnMenu = document.querySelector('.menu');
-btnMenu.addEventListener('click',()=>{
+/*btnMenu.addEventListener('click',()=>{
     btnShowMenu.classList.toggle('active');
-});
+});*/
 /* -------- Funtions --------- */
 function soloLetras(e) {
     key = e.keyCode || e.which;
@@ -88,3 +88,15 @@ btncerrarlogin.addEventListener('click', function(){
     containerlogin.classList.remove('active');
     login.classList.remove('active');
 });
+
+document.getElementById('imgfile').addEventListener('change',mostrarImagen(e));
+
+function mostrarImagen(event) {
+    var file = event.target.files[0];
+    var reader = new FileReader();
+    reader.onload = function(event) {
+        var img = document.getElementById('img1');
+        img.src= event.target.result;
+    }
+    reader.readAsDataURL(file);
+}

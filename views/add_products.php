@@ -7,20 +7,16 @@
 </head>
 
 <body>
-  <div class="container-bnss">
-      <div class="img-bnss">
-          <img src="./src/imgs/add_card.svg" alt="" width="100%" height="100%">
-      </div>
+    <div class="container-bnss">
+        <div class="img-bnss">
+            <img src="./src/imgs/add_card.svg" alt="" width="100%" height="100%">
+        </div>
     <div class="data-form">
         <form class="bnss-form" action="">
             <h1>Registro Producto</h1>
-            <label for="">Nombre del producto:</label>
             <input type="text" name="name" value="" id="name" placeholder="Ingrese nombre de la empresa" onkeypress="return soloLetras(event);" >
-            <label for="">Precio:</label>
             <input type="text" name="precio" value="" max="11" id="precio" placeholder="Ingrese precio" onkeypress="return soloNumeros(event);">
-            <label for="">Cantidad:</label>
             <input type="text" name="cant" value="" id="cant" placeholder="Ingrese cantidad" onkeypress="return soloNumeros(event);" >
-            <label for="">Descricion:</label>
             <input type="text" name="descrit" value="" id="descrit" placeholder="Ingrese alguna descricion" onkeypress="return soloLetras(event);" >
             <label for="">Disponilidad:</label>
             <select class="" name="" id="dispon">
@@ -63,31 +59,30 @@
         }
         document.getElementById('back').onclick = function(){
             swal({
-                     closeOnClickOutside:false,
-                     title: "Aviso !",
-                     text: "Esta seguro de cancelar registro",
-                     icon: "warning",
-                     buttons: {
-                     si:{
-                      text:"si",
-                      value:"si"
-                      },
-                      no:{
-                      text:"no",
-                      value:"no"
-                      },
-                      },
+                    closeOnClickOutside:false,
+                    title: "Aviso !",
+                    text: "Esta seguro de cancelar registro",
+                    icon: "warning",
+                    buttons: {
+                        si:{
+                            text:"Si",
+                            value:"si"
+                        },
+                        no:{
+                            text:"No",
+                            value:"no"
+                        },
+                    },
                 })
                 .then((value) => {
                 switch (value) {
                 case "si":
-                           window.location.href ="../views/product.html";
-                  break;
+                    window.location.href ="index.php?a=pages&p=product";
+                    break;
                 case "no":
-
-                  break;
-            }
-          })
+                    break;
+                }
+            })
         }
     </script>
 </html>

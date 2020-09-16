@@ -6,6 +6,8 @@
         <link rel="shortcut icon" href="../src/imgs/pngwing.com.png" type="image/x-icon">
         <script src="" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./src/css/generalStyle.css">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <title>Project Web</title>
     </head>
     <body>
@@ -15,15 +17,15 @@
                     <h2>Inicia session</h2>
                     <div class="input-icon">
                     <i class="far fa-address-card"></i>
-                        <input type="text" class="text" name="id" value="" placeholder="Ingrese Cedula" required>
+                        <input type="text" class="text" name="ci" id="ci" value="" maxlength="10" placeholder="Ingrese Cedula" onkeypress="return validateCI(event);" required>
+                    </div>
+                    <div class="input-icon">
+                        <i class="fas fa-user"></i> 
+                        <input type="text" class="text" name="firts_name" value="" placeholder="Ingrese sus nombres" onkeypress="return soloLetras(event);" required>
                     </div>
                     <div class="input-icon">
                         <i class="fas fa-user"></i>
-                        <input type="text" class="text" name="firts_name" value="" placeholder="Ingrese sus nombres" required>
-                    </div>
-                    <div class="input-icon">
-                        <i class="fas fa-user"></i>
-                        <input type="text" class="text" name="last_names" value="" placeholder="Ingrese sus apellidos" required>
+                        <input type="text" class="text" name="last_name" value="" placeholder="Ingrese sus apellidos" onkeypress="return soloLetras(event);" required>
                     </div>
                     <div class="input-icon">
                         <i class="fas fa-key"></i>
@@ -33,20 +35,33 @@
                 </form>
             </div>
         </div>
-        <!---<script src="./src/js/index.js"></script>--->
+        <script src="src/js/index.js"></script>
         <script>
+            function validateCI(e){
+                var ci = document.getElementById('ci');
+                prttCi = /^([0-9]{9})$/;
+                if(prttCi.test(ci.value)){
+                    ci.style.outlineColor = "blue";
+                    
+                }else{
+                    ci.style.outlineColor = 'red';
+                    
+                }
+            }
             $(document).ready(function(){
                 $('#register').on('submit',(e)=>{
                     e.preventDefault();
+                    console.log($('#register').serialize());
                     $.ajax({
                         type: 'POST',
-                        url: 'index?c=Usuario&a=registerUsuario',
+                        url: 'index.php?c=User&a=registerUser',
                         async: true,
                         data: $('#register').serialize(),
                         beforeSend: () => {
-
+                            
                         },
                         success: (res) => {
+                            console.log(res);
                             if(res){
                                 swal(
                                     "Usuario registrado",
@@ -54,7 +69,6 @@
                                     "success"
                                 );
                             }else{
-
                             }
                         },
                         error: (err) => {

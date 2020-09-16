@@ -6,8 +6,8 @@
     <title>Project Web</title>
 </head>
 <body>
+<?php require_once 'static/header.html'?>
     <div class="container">
-        <?php require_once 'static/header.html'?>
         <br>
         <div class="sub-container">
             <div class="sections-initial">
