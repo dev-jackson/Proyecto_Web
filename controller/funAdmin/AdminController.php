@@ -17,6 +17,13 @@ class AdminController{
         require_once LIB;
         require_once 'views/users.php';
     }
+
+    public function deleteUser(){
+        $res = $this->user->deleteForIdUser(
+            $_GET['id']
+        );
+        return $res;
+    }
 }
 
 ?>

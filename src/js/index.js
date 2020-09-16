@@ -100,3 +100,4 @@ function mostrarImagen(event) {
     }
     reader.readAsDataURL(file);
 }
+

@@ -39,6 +39,19 @@ class UserDAO {
             echo $e->getMessage();
         }
     }
+    public function deleteForIdUser($id){
+        $sql = "DELETE FROM user WHERE id_user=?";
+        try{
+            $prStm = $this->connec->prepare($sql);
+            $prStm->execute(array(
+                $id
+            ));
+            return true;
+        }catch(PDOException $e){
+            echo $e->getMessage();
+            return false;
+        }
+    }   
 }
 
 ?>
