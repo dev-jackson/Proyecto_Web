@@ -52,6 +52,35 @@ class UserDAO {
             return false;
         }
     }   
+
+    public function updateUser(UserDTO $u){
+        $sql = "UPDATE `user` SET `ci` = ?, `first_name` = ?, `last_name` = ?, `password` = ? WHERE `user`.`id_user` = ?";
+        try{
+            $prStm = $this->connec->prepare($sql);
+            $prStm->execute(array(
+                $u->getCi(),
+                $u->getFirstName(),
+                $u->getLastName(),
+                $u->getPassword(),
+                $u->getId()
+            ));
+            return false;
+        }catch(PDIException $e){
+            echo $e->getMessage();
+            return false;
+        }
+    }
+    public function findIdUser($id){
+        $sql = "SELECT * FROM user WHERE id_user=?";
+        try{
+            $prStm = $this->connec->prepare($sql);
+            $prStm->execute(array($id));
+            $result = $prStm->fetch(PDO::FETCH_OBJ);
+            return $result;
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }
+    }
 }
 
 ?>

@@ -17,15 +17,15 @@
                     <h2>Inicia session</h2>
                     <div class="input-icon">
                     <i class="far fa-address-card"></i>
-                        <input type="text" class="text" name="ci" id="ci" value="" maxlength="10" placeholder="Ingrese Cedula" onkeypress="return validateCI(event);" required>
+                        <input type="text" class="text" name="ci" id="ci" value="<?php if(isset($u)) echo $u->getCi(); ?>" maxlength="10" placeholder="Ingrese Cedula" onkeypress="return validateCI(event);" required>
                     </div>
                     <div class="input-icon">
                         <i class="fas fa-user"></i> 
-                        <input type="text" class="text" name="firts_name" value="" placeholder="Ingrese sus nombres" onkeypress="return soloLetras(event);" required>
+                        <input type="text" class="text" name="firts_name" value="<?php if(isset($u)) echo $u->getFirstName();?>" placeholder="Ingrese sus nombres" onkeypress="return soloLetras(event);" required>
                     </div>
                     <div class="input-icon">
                         <i class="fas fa-user"></i>
-                        <input type="text" class="text" name="last_name" value="" placeholder="Ingrese sus apellidos" onkeypress="return soloLetras(event);" required>
+                        <input type="text" class="text" name="last_name" value="<?php if(isset($u)) echo $u->getLastName();?>" placeholder="Ingrese sus apellidos" onkeypress="return soloLetras(event);" required>
                     </div>
                     <div class="input-icon">
                         <i class="fas fa-key"></i>

@@ -23,6 +23,17 @@
                 return flase;
             }
         }
+        public function changedDatesUser(){
+            $u = new UserDTO();
+            $res = (array) $this->user->findIdUser($_REQUEST['id']);
+            $u->setId($res['id_user']);
+            $u->setCi($res['ci']);
+            $u->setFirstName($res['first_name']);
+            $u->setLastName($res['last_name']);
+            $u->setPassword($res['password']);
+            require_once LIB;
+            require_once './views/registerUser.php';
+        }
     }
 
 ?>

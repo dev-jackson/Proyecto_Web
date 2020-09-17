@@ -12,7 +12,7 @@
         <div class="container-user" style="width:100%;">
             <section>
                 <h1>Users</h1>
-                <button type="button" class="btn btn-success">Agregar nuevo usuario</button>
+                <a href="index.php?a=pages&p=registerUser" class="btn btn-success">Agregar nuevo usuario</a>
                 <br>
                 <br>
             </section>
@@ -41,7 +41,7 @@
                                 <!---<td><?php //echo $r['password'];?></td>-->
                                 <td><?php echo $r['type_user'];?></td>
                                 <td>
-                                <button type="button" class="btn btn-primary" >Editar</button>
+                                <a class="btn btn-primary" href="index.php?c=User&a=changedDatesUser&id=<?php echo $r['id_user']?>">Editar</a>
                                 <button type="button" class="btn btn-danger" onclick="deleteUser(<?php echo $r['id_user'] ?>);" >Eliminar</button>
                                 </td>
                             </tr>
