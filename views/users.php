@@ -53,7 +53,7 @@
     </div>
     <?php require_once 'static/footer.html';?>
 </body>
-<script src="/src/js/index.js"></script>
+<script src="./src/js/index.js"></script>
 <script>
     function deleteUser(id){
     swal({

@@ -1,48 +1,108 @@
 <?php
     class UserDTO{
         private $id;
-        private $ci;
-        private $first_name;
-        private $last_name;
+        private $name;
+        private $edad;
+        private $correo;
+        private $idtipo;
         private $password;
-        private $type_user;
+
     //getters
     public function getId(){
         return $this->id;
     }
-    public function getCi(){
-        return $this->ci;
+    public function getName(){
+        return $this->name;
     }
-    public function getFirstName(){
-        return $this->first_name;
+    public function getEdad(){
+        return $this->edad;
     }
-    public function getLastName(){
-        return $this->last_name;
+    public function getCorreo(){
+        return $this->correo;
     }
     public function getPassword(){
         return $this->password;
     }
-    public  function getTypeUser(){
-        return $this->type_user;
+    public  function getIdtipo(){
+        return $this->idtipo;
     }
     //setters
     public function setId($id){
         $this->id = $id;
     }
-    public function setCi($ci){
-        $this->ci = $ci;
+    public function setName($name){
+        $this->name = $name;
     }
-    public function setFirstName($first_name){
-        $this->first_name = $first_name;
+    public function setEdad($edad){
+        $this->edad = $edad;
     }
-    public function setLastName($last_name){
-        $this->last_name = $last_name;
+    public function setCorreo($correo){
+        $this->correo = $correo;
     }
     public function setPassword($password){
         $this->password = password_hash($password,PASSWORD_DEFAULT);
     }
-    public function setTypeUser($type_user){
-        $this->type_user = $type_user;
+    public function setIdtipo($tipo){
+        $this->id = $tipo;
+    }
+}
+
+class EmpresaDTO extends UserDTO {
+    private $ruc;
+    private $tipo;
+    private $horario;
+    private $formaPago;
+
+    public function getRuc(){
+        return $this->ruc;
+    }
+    public function getTipo(){
+        return $this->tipo;
+    }
+    public function getHorario(){
+        return $this->horario;
+    }
+    public function getFormaPago(){
+        return $this->formaPago;
+    }
+    public function setRuc($ruc){
+        $this->ruc = $ruc;
+    }
+    public function setTipo($tipo){
+        $this->tipo = $tipo;
+    }
+    public function setHorario($horario){
+        $this->horario = $horario;
+    }
+    public function setFormaPago($formaPago){
+        $this->formaPago = $formaPago;
+    }
+}
+class ClienteDTO extends UserDTO{
+    private $formaPago;
+
+    public function setFormaPago($formaPago){
+        $this->formaPago = $formaPago;
+    }
+    public function getFormaPago(){
+        return $this->formaPago;
+    }
+}
+class Administrador extends UserDTO{
+    private $fecha;
+    private $idReporte;
+
+    public function getFecha(){
+        return $this->fecha;
+    }
+    public function getIdReporte(){
+        return $this->idReporte;
+    }
+    public function setFecha($fecha){
+        $this->fecha = $fecha;
+    }
+    public function setIdReporte($idr){
+        $this->idReporte = $idr;
     }
 }
 ?>

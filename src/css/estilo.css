@@ -1,0 +1,26 @@
+#cargando {
+    display: none;
+}
+body{
+    font-family: 'Righteous', cursive;
+	  background-color: rgb(123, 125, 134);
+ 
+}
+
+.transparent {
+    opacity: 0.2;
+}
+nav a{
+color:white;
+}
+
+main a{
+	
+color: red;	
+}
+
+main a:hover{
+	
+color:black;	
+	
+}

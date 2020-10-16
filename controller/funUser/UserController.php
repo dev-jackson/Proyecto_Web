@@ -11,12 +11,11 @@
         public function registerUser(){
             try{
                 $u = new UserDTO();
-                $u->setCi($_POST['ci']);
-                $u->setFirstName($_POST['firts_name']);
-                $u->setLastName($_POST['last_name']);
-                $u->setPassword($_POST['password']);
-                $u->setTypeUser('C');
-                $this->user->createUser($u);
+                $u->setName($_POST['name']);
+                $u->setCorreo($_POST['email']);
+                $u->setEdad($_POST['edad']);
+                $u->setPassword();
+                $this->user->createUser($u,0);
                 return true;
             }catch(Exception $e){
                 echo $e->gerMessage();
@@ -33,6 +32,13 @@
             $u->setPassword($res['password']);
             require_once LIB;
             require_once './views/registerUser.php';
+        }
+        public function login(){
+            $correo = $_POST['correo'];
+            $password = $_POST['password'];
+            $u = new UserDAO();
+            return $u->findIdUser($correo);
+            
         }
     }
 
